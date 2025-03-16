@@ -4,5 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.eol": "\n",
+		"files.autoSave": "onWindowChange",
+		"editor.codeActions.triggerOnFocusChange": true,
+		"diffEditor.ignoreTrimWhitespace": false,
+		"editor.trimAutoWhitespace": false
+	}
 }

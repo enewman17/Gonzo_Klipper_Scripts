@@ -1,0 +1,8 @@
+{
+    "files.eol": "\n",
+    "files.autoSave": "onWindowChange",
+    "editor.codeActions.triggerOnFocusChange": true,
+    "editor.experimentalGpuAcceleration": "on",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.trimAutoWhitespace": false
+}

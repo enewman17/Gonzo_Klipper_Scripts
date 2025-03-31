@@ -1,8 +1,16 @@
 {
-    "files.eol": "\n",
-    "files.autoSave": "onWindowChange",
-    "editor.codeActions.triggerOnFocusChange": true,
-    "editor.experimentalGpuAcceleration": "on",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.trimAutoWhitespace": false
+	"files.eol": "\n",
+	"files.autoSave": "onWindowChange",
+	"editor.codeActions.triggerOnFocusChange": true,
+	"editor.experimentalGpuAcceleration": "on",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.trimAutoWhitespace": true,
+	"editor.tabCompletion": "onlySnippets",
+	"editor.insertSpaces": false,
+	"[dockercompose]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false
+	},
+	"editor.detectIndentation": false,
+	"debug.console.acceptSuggestionOnEnter": "on"
 }

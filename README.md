@@ -1,6 +1,8 @@
 # Gonzo_Klipper_Scripts
 
- Klipper Scripts for the Voron 2.4 and other printers running klipper
+Klipper Scripts for the Voron 2.4 and other printers running klipper
+BE WARNED IF YOU FIND THESES SCRIPTS THEY ARE UNDER DEVELOPMENT, SOME THINGS MAY NOT WORK 100% BECAUSE I HAVENT TESTED EVERYTHING THROUGHLY.
+BUT ALL IN ALL EVERYTHING IN THE DAY TO DAY STUFF WORKS.
 
 Voron 2.4/Trident
 

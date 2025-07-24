@@ -8,7 +8,9 @@ SYSTEMDDIR="/etc/systemd/system"
 CONFIG_DIR="${HOME}/printer_data/config"
 
 # Find SRCDIR from the pathname of this script
-SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/src" && pwd )"
+#SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/src" && pwd )"
+SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 
 set_permissions() {
     echo -n "Setting file and directory permissions"

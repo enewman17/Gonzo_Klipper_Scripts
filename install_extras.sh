@@ -10,6 +10,14 @@ CONFIG_DIR="${HOME}/printer_data/config"
 # Find SRCDIR from the pathname of this script
 SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/src" && pwd )"
 
+set_permissions() {
+    echo -n "Setting file and directory permissions"
+    find . -type d -exec chmod 0744 {} +
+    find . -type f -exec chmod 0744 {} +
+    echo "[OK]"
+}
+
+
 # Run steps
 verify_ready
 check_klipper

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env bash
+﻿#!/bin/bash
 set -e
 
 CONFIG_DIR="${HOME}/printer_data/config"

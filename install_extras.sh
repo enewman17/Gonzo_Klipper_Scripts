@@ -12,34 +12,27 @@ CONFIG_DIR="${HOME}/printer_data/config"
 SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
-set_permissions() {
+set_permissions() 
+{
     echo -n "Setting file and directory permissions"
     find . -type d -exec chmod 0744 {} +
     find . -type f -exec chmod 0744 {} +
     echo "[OK]"
 }
 
-
-# Run steps
-verify_ready
-check_klipper
-check_folders
-stop_klipper
-link_extension
-start_klipper
-
-
 # ---------------------------
 # Helper functions
 
-verify_ready() {
+verify_ready()
+{
     if [ "$EUID" -eq 0 ]; then
         echo "[ERROR] This script must not be run as root. Exiting."
         exit 1
     fi
 }
 
-check_klipper() {
+check_klipper()
+{
     if systemctl list-units --full -all -t service --no-legend | grep -qF "$KLIPPER_SERVICE_NAME.service"; then
         echo "Klipper service found with name \"$KLIPPER_SERVICE_NAME\"."
     else
@@ -48,7 +41,8 @@ check_klipper() {
     fi
 }
 
-check_folders() {
+check_folders()
+{
     if [ ! -d "$KLIPPER_PATH/klippy/extras/" ]; then
         echo "[ERROR] Klipper installation not found at \"$KLIPPER_PATH\". Exiting."
         exit 1
@@ -62,13 +56,15 @@ check_folders() {
     echo "Moonraker configuration found at $CONFIG_DIR"
 }
 
-stop_klipper() {
+stop_klipper()
+{
     echo -n "Stopping Klipper... "
     sudo systemctl stop "$KLIPPER_SERVICE_NAME"
     echo "[OK]"
 }
 
-link_extension() {
+link_extension()
+{
     echo -n "Creating symlinks to klippy/extras... "
     for f in "${SRCDIR}/extras/"*; do
         ln -sf "$f" "${KLIPPER_PATH}/klippy/extras/"
@@ -76,8 +72,19 @@ link_extension() {
     echo "[OK]"
 }
 
-start_klipper() {
+start_klipper()
+{
     echo -n "Starting Klipper... "
     sudo systemctl start "$KLIPPER_SERVICE_NAME"
     echo "[OK]"
 }
+
+
+# Run steps
+verify_ready
+set_permissions
+check_klipper
+check_folders
+stop_klipper
+link_extension
+start_klipper

@@ -12,5 +12,13 @@
 		"editor.insertSpaces": false
 	},
 	"editor.detectIndentation": false,
-	"debug.console.acceptSuggestionOnEnter": "on"
+	"debug.console.acceptSuggestionOnEnter": "on",
+	"workbench.list.horizontalScrolling": false,
+	"workbench.list.smoothScrolling": true,
+	"editor.smoothScrolling": true,
+	"editor.scrollbar.ignoreHorizontalScrollbarInContentHeight": false,
+	"editor.scrollbar.horizontal": "visible",
+	"workbench.editor.splitInGroupLayout": "horizontal",
+	"terminal.integrated.allowChords": false,
+	"editor.scrollBeyondLastColumn": 10000
 }

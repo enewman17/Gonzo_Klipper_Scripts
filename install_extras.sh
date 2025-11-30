@@ -87,4 +87,4 @@ check_klipper
 check_folders
 stop_klipper
 link_extension
-start_klipper
+#start_klipper

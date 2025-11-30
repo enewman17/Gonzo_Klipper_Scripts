@@ -1,4 +1,4 @@
-﻿# Support for "custom_neopixel" leds
+﻿# Support for "neopixel_custom" leds
 #
 # Based on neopixel.py - Copyright (C) 2019-2022 Kevin O'Connor <kevin@koconnor.net>
 # Modified for custom max_mcu_size support
@@ -11,7 +11,7 @@ BACKGROUND_PRIORITY_CLOCK = 0x7fffffff00000000
 BIT_MAX_TIME=.000004
 RESET_MIN_TIME=.000050
 
-class PrinterCustomNeoPixel:
+class PrinterNeoPixelCustom:
     def __init__(self, config):
         self.printer = printer = config.get_printer()
         self.mutex = printer.get_reactor().mutex()
@@ -108,4 +108,4 @@ class PrinterCustomNeoPixel:
         return self.led_helper.get_status(eventtime)
 
 def load_config_prefix(config):
-    return PrinterCustomNeoPixel(config)
+    return PrinterNeoPixelCustom(config)

@@ -11,9 +11,9 @@
         self.gcode.register_command('COMPARE_POS', self.cmd_COMPARE_POS, 
                                    desc=self.cmd_COMPARE_HELP)
     
-	cmd_RECORD_HELP = 'Record MCU positions before test'
-        
-	cmd_COMPARE_HELP = 'Compare current MCU positions to start'
+    cmd_RECORD_HELP = 'Record MCU positions before test'
+    
+    cmd_COMPARE_HELP = 'Compare current MCU positions to start'
 
     def get_mcu_positions(self):
         # Access the toolhead and kinematics to get raw stepper positions

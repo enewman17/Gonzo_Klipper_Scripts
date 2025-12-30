@@ -45,7 +45,7 @@ class TestSpeedCheck:
             self.start_mcu_pos = self.get_stepper_info()
             gcmd.respond_info("TEST_SPEED: Initial positions recorded.")
         except Exception as e:
-            gcmd.respond_error("TEST_SPEED Error in RECORD_START_POS: %s" % (str(e),))
+            gcmd.error("TEST_SPEED Error in RECORD_START_POS: %s" % (str(e),))
 
     def cmd_COMPARE_POS(self, gcmd):
         if not self.start_mcu_pos:

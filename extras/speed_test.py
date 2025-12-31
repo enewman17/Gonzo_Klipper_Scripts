@@ -24,13 +24,11 @@ class SpeedTest:
         kin = toolhead.get_kinematics()
         steppers = kin.get_steppers()
         
-        mcu_pos = s.get_mcu_position()
-
         stepper_data = {}
         for s in steppers:
             # internal name to config name mapping
             s_name = s.get_name().replace(' ', '_')
-            
+            mcu_pos = s.get_mcu_position()
             # Pull microsteps from the settings dictionary
             configfile = self.printer.lookup_object('configfile')
             sconfig = configfile.get_status(None)['settings']

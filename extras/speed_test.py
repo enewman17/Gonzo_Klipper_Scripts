@@ -25,17 +25,17 @@ class SpeedTest:
         steppers = kin.get_steppers()
         
         mcu_pos = s.get_mcu_position()
-        
-		# Pull microsteps from the settings dictionary
-        configfile = self.printer.lookup_object('configfile')
-        sconfig = configfile.get_status(None)['settings']
-        stconfig = sconfig.get(s_name, {})
-        microsteps = stconfig['microsteps']
 
         stepper_data = {}
         for s in steppers:
             # internal name to config name mapping
             s_name = s.get_name().replace(' ', '_')
+            
+            # Pull microsteps from the settings dictionary
+            configfile = self.printer.lookup_object('configfile')
+            sconfig = configfile.get_status(None)['settings']
+            stconfig = sconfig.get(s_name, {})
+            microsteps = stconfig['microsteps']
             
             stepper_data[s_name] = {
                 'pos': mcu_pos,

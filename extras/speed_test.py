@@ -14,7 +14,7 @@ class SpeedTest:
         self.logger = logging.getLogger("SPEED_TEST")
 
     def register_commands(self):
-        self.gcode.register_command('POSITION_START_INFO', self.cmd_POSITION_START_INFO, 
+        self.gcode.register_command('RECORD_POSITION_START', self.cmd_RECORD_POSITION_START, 
                                    desc=self.cmd_START_DESC)
         self.gcode.register_command('COMPARE_POSITION_END', self.cmd_COMPARE_POSITION_END, 
                                    desc=self.cmd_COMPARE_DESC)
@@ -43,7 +43,7 @@ class SpeedTest:
             }
         return stepper_data
 
-    def cmd_POSITION_START_INFO(self, gcmd):
+    def cmd_RECORD_POSITION_START(self, gcmd):
         try:
             self.start_mcu_pos = self.get_stepper_info()
             if not self.start_mcu_pos:
@@ -53,7 +53,7 @@ class SpeedTest:
                 gcmd.respond_info(f"SPEED_TEST: Recorded positions for: {s_list}")
                 self.logger.info(f"SPEED_TEST Recorded: {self.start_mcu_pos}")
         except Exception as e:
-            self.logger.exception("ERROR in POSITION_START_INFO")
+            self.logger.exception("ERROR in RECORD_POSITION_START")
             raise gcmd.error(f"!! SPEED_TEST ERROR: {str(e)} !!")
 
 

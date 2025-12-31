@@ -66,7 +66,7 @@ class TestSpeedCheck:
             return
 
         try:
-            end_mcu_data = self.get_stepper_info()
+            end_mcu_data = self.get_stepper_positions()
             output = ["Speed Test Comparison Report:"]
             overall_fail = False
             

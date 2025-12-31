@@ -3,7 +3,7 @@
 There are a lot of Klipper Macros available but nothing quite fit my usage or how I wanted things to work. 
 These macros were taylored for the 350 Voron 2.4 but should work with all printers running Klipper.
 
-# BE WARNED IF YOU FIND THESES SCRIPTS THEY ARE UNDER DEVELOPMENT, SOME THINGS MAY NOT WORK 100% BECAUSE I HAVENT TESTED EVERYTHING THROUGHLY.
+## BE WARNED IF YOU FIND THESES SCRIPTS THEY ARE UNDER DEVELOPMENT, SOME THINGS MAY NOT WORK 100% BECAUSE I HAVENT TESTED EVERYTHING THROUGHLY.
 
 I have amassed a buch of macros and wrote even more to come up with a fairly comprehensive collections of controls for printers running klipper.
 There is no installer just yet, it's on my todo list... For now I have uploaded these for my own use and any power users who may come across these to use as they see fit. 
@@ -13,7 +13,7 @@ I use an ERCF so Happy Hare is also pretty well intigrated into these macros. Th
 I added a lot of options and checks in the macro_variables to mitigate errors and bypass features if not in use or supported by one's printer. 
 
 
-###### Many thanks to:
+### Many thanks to:
 
 Justin Schuh: <https://github.com/jschuh/klipper-macros> A lot of code and ideas were borrowed from those macros.  
 

@@ -1,4 +1,4 @@
-﻿# Support for "neopixel_custom" leds
+# Support for "neopixel_custom" leds
 #
 # Based on neopixel.py - Copyright (C) 2019-2022 Kevin O'Connor <kevin@koconnor.net>
 # Modified for custom max_mcu_size support

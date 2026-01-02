@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/usr/bin/bash
 
 
 KLIPPER_HOME="${HOME}/klipper"

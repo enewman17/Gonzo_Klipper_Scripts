@@ -1,4 +1,4 @@
-﻿import logging
+import logging
 
 class SpeedTest:
     def __init__(self, config):

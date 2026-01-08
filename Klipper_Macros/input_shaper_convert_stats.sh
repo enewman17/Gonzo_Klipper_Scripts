@@ -1,7 +1,14 @@
 #!/bin/bash
 
 SHAPER_SCRIPT=~/klipper/scripts/calibrate_shaper.py
-OUTPUT_DIR=~/printer_data/config/Klipper_Macros/shaper
+OUTPUT_DIR=~/printer_data/config/shaper_data
+
+# Check for Output Directory then create it if it doesn't already exist
+if [ ! -d "$OUTPUT_DIR" ]; then
+    echo "Creating directory: $OUTPUT_DIR"
+    mkdir -p "$OUTPUT_DIR"
+fi
+#
 
 run_cal() {
     local axis=$1
@@ -9,7 +16,7 @@ run_cal() {
     $SHAPER_SCRIPT /tmp/calibration_data_${axis}_*.csv -o ${OUTPUT_DIR}/shaper_calibration_graph_${axis}.png
 }
 
-# The input is now expected as a clean string (e.g., xyz)
+# The input expected <xyz>, <x>, <y> or <xy>
 INPUT_ARGS="$1"
 
 if [[ -z "$INPUT_ARGS" ]]; then
